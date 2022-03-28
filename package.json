@@ -1,0 +1,49 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "dev:debug": "npm run dev -- --verbose",
+    "start": "npm run dev",
+    "build": "astro build",
+    "build:debug": "npm run build -- --verbose",
+    "preview": "astro preview",
+    "prepare": "husky install",
+    "lint": "eslint src --ext .js,.ts,.svelte",
+    "lint:css": "stylelint 'src/**/*.{css,svelte}'",
+    "format": "prettier --write",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "astro": "^0.24.0",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-svelte3": "^3.3.0",
+    "husky": "^7.0.4",
+    "open-props": "^1.3.8",
+    "postcss-html": "^1.3.0",
+    "postcss-jit-props": "^1.0.4",
+    "postcss-load-config": "^3.1.1",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.3.2",
+    "prettier": "^2.5.1",
+    "prettier-plugin-astro": "^0.0.11",
+    "prettier-plugin-svelte": "^2.5.1",
+    "stylelint": "^14.5.0",
+    "stylelint-config-html": "^1.0.0"
+  },
+  "lint-staged": {
+    "*.{css,svelte}": "stylelint",
+    "*.{js,svelte}": "eslint --cache --fix",
+    "*.{js,astro,svelte,md,html,css}": "prettier --write"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

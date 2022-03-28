@@ -1,0 +1,56 @@
+@import "open-props/postcss/style";
+@import "open-props/postcss/normalize";
+@import "open-props/media";
+
+:root {
+  --brand: var(--grape-7);
+  --link: var(--indigo-7);
+  --link-visited: var(--indigo-7);
+  --size-content-4: 70ch;
+}
+
+body {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: var(--font-weight-4);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-5);
+  max-inline-size: var(--size-header-2);
+}
+
+p {
+  line-height: var(--font-lineheight-3);
+  max-inline-size: var(--size-content-4);
+}
+
+section {
+  margin: var(--size-8) 0;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    margin: var(--size-4) 0;
+  }
+}
+
+.container {
+  padding: var(--size-4);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

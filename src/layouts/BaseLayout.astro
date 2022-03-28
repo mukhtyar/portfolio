@@ -1,0 +1,22 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Nav from "../components/Nav.svelte";
+import Footer from "../components/Footer.svelte";
+
+import { routes } from "../data/routes";
+
+const { title, description, path } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <MainHead {title} {description} />
+  </head>
+  <body>
+    <Nav client:load {routes} currentRoute={path} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer {routes} currentRoute={path} />
+  </body>
+</html>
