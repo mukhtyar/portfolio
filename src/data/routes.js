@@ -16,7 +16,7 @@ export const routes = [
     icon: IconTwitter,
   },
   {
-    path: "https://observablehq.com/@mukhtyar?tab=profile",
+    path: "https://observablehq.com/@mukhtyar?tab=collections",
     label: "ObservableHQ",
     icon: IconObservable,
   },
