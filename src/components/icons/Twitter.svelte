@@ -12,7 +12,7 @@
   let ariaHidden = DEFAULT_ARIA_HIDDEN;
   let title = DEFAULT_TITLE;
 
-  const titleId = "icon-github";
+  const titleId = "icon-twitter";
   const ariaLabelledBy = !ariaHidden && title;
 </script>
 

@@ -1,5 +1,5 @@
 // Represents page routes used by the Nav & Footer component
-import { IconGithub, IconTwitter, IconObservable } from "../components/icons";
+import { IconGithub, IconObservable, IconLinkedIn } from "../components/icons";
 
 export const routes = [
   {
@@ -11,18 +11,18 @@ export const routes = [
   //   label: "Blog",
   // },
   {
-    path: "https://twitter.com/mapchitra",
-    label: "Twitter",
-    icon: IconTwitter,
-  },
-  {
-    path: "https://observablehq.com/@mukhtyar?tab=collections",
-    label: "ObservableHQ",
-    icon: IconObservable,
+    path: "https://www.linkedin.com/in/shruti-mukhtyar/",
+    label: "LinkedIn",
+    icon: IconLinkedIn,
   },
   {
     path: "https://github.com/mukhtyar",
     label: "Github",
     icon: IconGithub,
+  },
+  {
+    path: "https://observablehq.com/@mukhtyar?tab=collections",
+    label: "ObservableHQ",
+    icon: IconObservable,
   },
 ];
