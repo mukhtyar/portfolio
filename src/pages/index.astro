@@ -36,13 +36,6 @@ const latestPosts = posts.slice(-2);
       <p>Experience working across science, policy and tech teams</p>
     </div>
   </section>
-  <section class="projects">
-    <div class="container">
-      <h2>Selected Projects</h2>
-      <ProjectWrapper projects={latestProjects} />
-      <Button href="/projects">View More Projects</Button>
-    </div>
-  </section>
   <section class="recent-posts">
     <div class="container">
       <div class="split-content">
@@ -54,6 +47,13 @@ const latestPosts = posts.slice(-2);
         </div>
       </div>
       <Button href="/blog">View All Posts</Button>
+    </div>
+  </section>
+  <section class="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <ProjectWrapper projects={latestProjects} />
+      <Button href="/projects">View More Projects</Button>
     </div>
   </section>
   <section>
