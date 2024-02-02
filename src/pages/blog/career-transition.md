@@ -11,7 +11,7 @@ tags:
 
 Hey there! In this blog post, I want to share with you why I have decided to pursue a career change and work in a data science role in climate.
 
-## My Journey so far
+## My journey so far
 
 I have always loved maps and data. I started my career as a GIS Analyst at various environmental consulting firms. This experience gave me a solid foundation in working with geospatial data and applying analytical and programming skills to solve problems and optimize workflows.
 
@@ -21,7 +21,7 @@ I was lucky to get a job as a frontend developer at the Geospatial Innovation Fa
 
 One of the main projects I was involved in was [Cal-Adapt](https://cal-adapt.org/), a web platform that provides access to peer-reviewed climate data and tools for California. I designed and developed user interfaces, interactive visualizations, and web applications using Figma, Mapbox, D3, Svelte & IBM’s Carbon Design System. I was proud of my work and how it helped people understand and adapt to climate change.
 
-## My Interest in Data Science
+## My interest in Data Science
 
 One of the most challenging and rewarding projects I worked on was the [Extreme Precipitation Events](https://cal-adapt.org/tools/extreme-precipitation). It is a tool that shows broadly how rain patterns could change in California due to climate change. There is no single definition of what extreme precipitation means. Precipitation events can be extreme in their duration, maximum precipitation rate, total volume of precipitation delivered, or a combination of these three factors. Often, extreme precipitation events are identified based on their return period. I did a deep dive into climate science publications to understand the different methods and metrics used to measure extreme precipitation. I used Python to analyze the data and prototype visualizations in Jupyter Notebooks. This was the spark that ignited my interest in data science.
 
@@ -35,6 +35,6 @@ More on these projects in future posts!
 
 ## Future goals
 
-I love working with data. I want to use my skills and experience to work on data science applications for reducing and responding to climate change. I am particularly interested in the application of machine learning to tackle challenges and opportunities in the global energy transition and carbon removal technolgoies.
+I love working with data and I am passionate about using my skills and experience to work on reducing and responding to climate change. I am particularly interested in the application of machine learning to tackle challenges and opportunities in the global energy transition and carbon removal technolgoies.
 
-I hope you enjoyed reading my blog post and learned more about me and my data science journey. I would love to hear from you and get your feedback or questions (connect with me on [Twitter](https://twitter.com/mapchitra) or email at shruti dot mukhtyar@gmail.ocm). Thank you for your time and attention.😊
+I hope you enjoyed reading my blog post and learned more about me and my data science journey. I would love to hear from you and get your feedback or questions (connect with me on [Twitter](https://twitter.com/mapchitra) or email at shruti dot mukhtyar at gmail.com). Thank you for your time and attention.😊
