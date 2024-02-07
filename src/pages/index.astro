@@ -8,7 +8,7 @@ import Card from "../components/Card.svelte";
 import Socials from "../components/Socials.svelte";
 
 import { routes } from "../data/routes";
-const socials = routes.filter(d => d.icon);
+const socials = routes.filter((d) => d.icon);
 
 // Data Fetching: List all Markdown posts for project in the repo.
 const projects = Astro.fetchContent("./project/**/*.md")
@@ -32,9 +32,9 @@ const latestPosts = posts.slice(-4);
   <section class="intro">
     <div class="container">
       <h1>
-        Detail-oriented front-end developer and geospatial analyst with 15+
-        years of experience synthesizing climate science and environmental data
-        into interactive visualizations, maps and research summaries for diverse
+        Detail-oriented frontend developer and geospatial analyst with 15+ years
+        of experience synthesizing climate science and environmental data into
+        interactive visualizations, maps and research summaries for diverse
         audiences.
       </h1>
       <p>Experience working across science, policy and tech teams</p>
