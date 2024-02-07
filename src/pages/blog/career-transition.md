@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Why I Want to Transition to a Career in Data Science
 client: Self
 publishDate: 2023-12-12 00:00:00
-description: We built an unofficial Mars Rover Landing site in celebration of NASA’s Perseverance Rover.
+description: A brief romp through my career journey so far.
 tags:
   - data-science
   - learning
@@ -28,6 +28,7 @@ One of the most challenging and rewarding projects I worked on was the [Extreme 
 I wanted to learn more about how to work with data and took an online course on data science from UC Berkeley. It was called [Data 8: The Foundations of Data Science](http://www.data8.org/). It taught me how to analyze real world datasets using inferential and computational thinking. The skills and concepts I learned were very useful for designing other Cal-Adapt tools, such as the [Local Climate Change Snapshot Tool](https://cal-adapt.org/tools/local-climate-change-snapshot) and the [Extreme Weather Tool](https://cal-adapt.org/tools/extreme-weather).
 
 After 9 years at the GIF, I decided to take a break and learn more about machine learning and deep learning. I took courses offered by [DeepLearning.AI](https://www.deeplearning.ai/) and learning from Andrew Ng helped me grasp the foundational concepts and the math behind the cutting-edge techniques that are transforming data science. I am currently working on some personal projects to get a deeper understanding of machine learning applications, e.g.:
+
 - Analyzing and visualizing Stack Exchange posts on Gardening and Landscaping using Google's vertexAI, pandas, and plotly.
 - Experimenting with different models to detect and convert tables in old documents to json data
 
