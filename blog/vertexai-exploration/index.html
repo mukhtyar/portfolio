@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-<meta name="description" property="og:description" content="Rescuing historical ecological data">
+<meta name="description" property="og:description" content="Building a simple question-answer system is a great way to practice your data science skills.">
 <meta name="viewport" content="width=device-width">
-<title>Vegetation Type Mapping</title>
+<title>Building a question-answer system with Vertex AI</title>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -25,8 +25,8 @@
 </script>
 
   <link rel="stylesheet" href="/assets/Button.7eb550c2.css"></link>
-<link rel="stylesheet" href="/assets/ProjectLayout.52c8c0e3.css"></link>
-<link rel="stylesheet" href="/assets/Footer.24b62fab.css"></link><style astro-style="true">astro-root, astro-fragment { display: contents; }</style><script type="module" data-astro-component-hydration astro-script="/project/vtm/script-0">import setup from '../../load.28fdc308.js';
+<link rel="stylesheet" href="/assets/BlogPostLayout.91b4635d.css"></link>
+<link rel="stylesheet" href="/assets/Footer.24b62fab.css"></link><style astro-style="true">astro-root, astro-fragment { display: contents; }</style><script type="module" data-astro-component-hydration astro-script="/blog/vertexai-exploration/script-0">import setup from '../../load.28fdc308.js';
 setup("gBHyh", {name:"Nav",value: true}, async () => {
   const [{ default: Component }, { default: hydrate }] = await Promise.all([import("../../Nav.75862199.js"), import("../../client.f1fece1f.js")]);
   return (el, children) => hydrate(el)(Component, {"routes":[{"path":"\u002Fprojects","label":"Projects"},{"path":"\u002Fblog","label":"Blog"},{"path":"https:\u002F\u002Fwww.linkedin.com\u002Fin\u002Fshruti-mukhtyar\u002F","label":"LinkedIn","icon":{"render":(props = {}, { $slots = {}, context = new Map() } = {}) => {
@@ -141,7 +141,7 @@ setup("gBHyh", {name:"Nav",value: true}, async () => {
         const html = fn(result, props, bindings, slots);
         set_current_component(parent_component);
         return html;
-    }}}],"currentRoute":"http:\u002F\u002Fvtm.berkeley.edu\u002F#\u002Fhome"}, children);
+    }}}],"currentRoute":undefined}, children);
 
 });
 </script>
@@ -160,44 +160,48 @@ setup("gBHyh", {name:"Nav",value: true}, async () => {
             <span class="sr-only">Kaggle</span></a>
       </li></ul></nav></astro-root>
     <main id="main">
-      <section class="astro-JGKTXER6">
-    <div class="container astro-JGKTXER6">
-      <div class="project-top-content astro-JGKTXER6">
-        <h1 class="astro-JGKTXER6">Rescuing historical ecological data</h1>
-        
-
-<a tabindex="0" href="http://vtm.berkeley.edu/#/home" class="btn svelte-1dt5tjy" target="_blank">View Website</a>
+      <section class="astro-FYKZJ2XS">
+    <div class="container astro-FYKZJ2XS">
+      <div class="blog-top-content astro-FYKZJ2XS">
+        <h1 class="astro-FYKZJ2XS">Building a question-answer system with Vertex AI</h1>
+        <p class="astro-FYKZJ2XS">
+          Wednesday, February 7, 2024
+        </p>
       </div>
 
-      <div class="project-about-grid astro-JGKTXER6">
-        <div class="project-about-wrapper astro-JGKTXER6">
-          <div class="project-about-title astro-JGKTXER6">Services</div>
-          <ul class="astro-JGKTXER6">
-            <li class="astro-JGKTXER6">Web Development</li><li class="astro-JGKTXER6">Web Design</li>
-          </ul>
-        </div>
-        <div class="project-about-wrapper astro-JGKTXER6">
-          <div class="project-about-title astro-JGKTXER6">Client</div>
-          <ul class="astro-JGKTXER6">
-            <li class="astro-JGKTXER6">UC Berkeley Department of Environmental Science, Policy, and Management </li>
-          </ul>
-        </div>
-        <div class="project-about-wrapper astro-JGKTXER6">
-          <div class="project-about-title astro-JGKTXER6">Date</div>
-          <div class="astro-JGKTXER6">
-            January 2014 - December 2016
-          </div>
-        </div>
-      </div>
+      <div class="blog-divider astro-FYKZJ2XS"></div>
 
-      <div class="project-divider astro-JGKTXER6"></div>
-
-      <div class="project-content astro-JGKTXER6">
-        <h2 id="background">Background</h2><p>The Wieslander Vegetation Type Mapping website showcases vegetation maps, photographs and plot locations from a series of surveys from the 1920s and 1930s carried out by Albert Everett Wieslander and others. These data represent a snapshot of California’s vegetation in the early 20th century, and are a valuable resource for comparative and conservation ecology.</p><h2 id="my-work">My Work</h2><p>I designed and built this website using <a href="https://angularjs.org/">AngularJS 1.2</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. It was my first experience using a JavaScript framework, and I fell in love with the two-way data binding 🤩 till I wanted to plot hundreds of plot and photo locations on a map! With the breaking changes in <a href="https://angularjs.org/">Angular 2</a>, I stayed away from all the cool JavaScript frameworks till I came across <a href="https://svelte.dev/">Svelte</a> ❤️.</p><h2 id="credits">Credits</h2><p>Co-developed with the team at the <a href="http://gif.berkeley.edu/">Geospatial Innovation Facility, UC Berkeley</a>, using the <a href="https://holos.berkeley.edu/">Berkeley Ecoinformatics Engine</a>.</p>
+      <div class="blog-content astro-FYKZJ2XS">
+        <p>If you are looking for a project idea to practice the data science skills you acquired through online courses, building a simple question-answer system is a great place to start.</p><h2 id="whats-a-question-answer-system">What’s a question-answer system?</h2><p>A question-answer system is an AI application that:</p><ul>
+<li>takes a user’s question</li>
+<li>converts it into a numerical format (aka <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/model-reference/text-embeddings">text embedding</a>)</li>
+<li>searches a store of information that you specify ( e.g. database, document, web) which is in the same numerical format (aka semantic search)</li>
+<li>finds the most relevant content</li>
+<li>sends this content to a large language model (LLM) as <code>context</code></li>
+<li>generates an answer via the LLM using a <code>prompt</code> that you design and the <code>context</code> you provide</li>
+</ul><p>In deep learning speak, this is an example of Retrieval-Augmented Generation (RAG). This <a href="https://inside-machinelearning.com/en/rag/">article</a> has a great explantion of RAG. One application of a question-asnwer system is automating the creation of a Frequently Asked Questions document from a knowledge base.</p><h2 id="how-do-i-build-one">How do I build one?</h2><p>A short course on DeepLearning.AI called Understanding and Applying Text Embeddings is a great guide to getting started on this project. The course (which is free for now) walks you through building a question-answer system using Google’s <a href="https://cloud.google.com/vertex-ai">Vertex AI</a>.</p><p>Vertex AI is a machine learning platform by Google where you can build, deploy, and scale AI models with pre-trained and custom models. Your first challenge will be setting up a Google Cloud account and creating a project. If you you need help with this, here is a good <a href="">walkthrough</a>. My Google Cloud computing costs for generating text embeddings for about 7000 records a few times was less than a $1.</p><p>I chose to use the Vertex AI SDK for Python in Kaggle notebooks, but it might be easier to use the library on Google platforms like the Vertex AI Workbench (a Jupyter notebook-based development environment provided by Google Cloud) or Google Colab.</p><h3 id="get-some-data">Get some data!</h3><p>Your second challenge is identify some question-answer data you want to work with. There are lot of great datasets on Kaggle, or you can create your own like I did. I love gardening, so I decided to work with data generated by the Stack Exchange Gardening and Landscaping community. The <a href="https://data.stackexchange.com/">Stack Exchange Data Explorer</a> is a great resource for downloading question-answer data. I created a dataset on Kaggle with a csv file of questions and accepted answers. The <a href="https://www.kaggle.com/datasets/shrutimukhtyar/stack-exchange-gardening-and-landscaping">Gardening Q&#x26;A with text embeddings</a> is publicly available from Kaggle. The dataset also includes the text embeddings generated by Vertex AI models for questions and tags.</p><h3 id="write-some-code--">Write some code :-)</h3><p>The following Kaggle notebooks walk you through building a simple system that will answer any queries you have on gardening.</p><ul>
+<li><a href="https://www.kaggle.com/code/shrutimukhtyar/vertex-ai-setup-environment-on-kaggle">Vertex AI: Setup environment on Kaggle</a></li>
+<li><a href="https://www.kaggle.com/code/shrutimukhtyar/vertex-ai-generate-text-embeddings">Vertex AI: Generate Text Embeddings</a></li>
+<li><a href="https://www.kaggle.com/code/shrutimukhtyar/vertex-ai-visualizing-text-embeddings">Vertex AI: Visualizing text embeddings</a></li>
+<li><a href="https://www.kaggle.com/code/shrutimukhtyar/vertex-ai-q-a-system-using-semantic-search">Vertex AI: Q&#x26;A system using semantic search</a></li>
+</ul><h2 id="lessons-learned">Lessons learned</h2><ul>
+<li>Initially, navigating the Google AI ecosystem was confusing. The course uses 2 models called <code>textembedding-gecko</code> and <code>text-bison</code> accessible via Vertex AI. Based on my current understanding, here is a brief overview of the Google AI ecosystem:
+<ul>
+<li>PaLM 2 and Gemini are two different foundation models developed by Google (there some <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/learn/overview">others</a> too). PaLM 2 is a LLM that specializes in natural language understanding and generation (it is the power behind Bard). Gemini is a multimodal LLM that can handle different types of data, such as text, images, audio, and code. <a href="https://bito.ai/blog/gemini-vs-palm2/">This article</a> describes both in more detail.</li>
+<li>Both <code>textembedding-gecko</code> and <code>text-bison</code> belong to the PaLM 2 family.</li>
+<li>Vertex AI provides access to all PaLM 2 and Geimini models <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/learn/models">through different APIs</a></li>
+</ul>
+</li>
+<li>The body of some questions on Stack Exchange contain html elements like links and images. I did not remove these elements before sending them to Vertex AI to generate text embeddings using the <code>textembedding-gecko@003</code> model. I remember reading somewhere that the <code>textembedding-gecko</code> model will just ignore these html elements, but after looking at the answers the system generated, it’s possible that removing these elements might generate better text embeddings.</li>
+<li>I followed the prompt provided in the course, yet the combination of this prompt and the context I supplied to the <code>text-bison@002</code> text generation model did not consistently yield the best answers.
+<ul>
+<li>One interpretation of this could be that the Stack Exchange dataset does not have the best answers, compared to the general training data that the PaLM 2 foundation model was trained on.</li>
+<li>Another way to think about this is that in a topic like gardening there are many good answers. In the <a href="https://www.kaggle.com/code/shrutimukhtyar/vertex-ai-q-a-system-using-semantic-search">Vertex AI: Q&#x26;A system using semantic search</a> notebook, I select only 1 question-answer that’s closest semantically to the user’s query and provide it as as <code>context</code>. Instead, if I selected more than 1 relevant question-answers as <code>context</code>, the system would generate a better response. The maximum length of text you can send a PaLM 2 model is about <a href="https://ai.google.dev/models/palm">8000 tokens</a> (100 tokens are about 60-80 English words).</li>
+</ul>
+</li>
+<li>Using an alternative prompt that directs the LLM to leverage both the provided context and its training data for answer generation might result in more relevant answers for a gardening Q&#x26;A.</li>
+</ul><p>It was fun putting this together! Although my gardening question-answer system lot of room for improvement, I gained considerable insight into Google’s AI ecosystem, as well as valuable experience in handling real-world data and navigating its complexities.</p>
       </div>
-    </div>
-    <div class="project-screenshots astro-JGKTXER6">
-      <img src="/assets/projects/vtm-home.jpeg" alt="Screenshot of the VTM home page" title="VTM home" class="astro-JGKTXER6"><img src="/assets/projects/vtm-datasets.jpeg" alt="Screenshot of the VTM datasets page" title="VTM datasets" class="astro-JGKTXER6"><img src="/assets/projects/vtm-vegetation.jpeg" alt="Screenshot of the VTM vegetation map" title="VTM vegetation" class="astro-JGKTXER6">
     </div>
   </section>
     </main>
