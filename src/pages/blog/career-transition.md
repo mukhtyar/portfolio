@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: Why I Want to Transition to a Career in Data Science
 client: Self
 publishDate: 2023-12-12 00:00:00
-description: A brief romp through my career journey so far.
+description: A brief walk through my career journey so far.
 tags:
   - data-science
   - learning
