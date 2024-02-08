@@ -53,8 +53,13 @@ const { content } = Astro.props;
     margin-top: var(--size-4);
   }
 
-  :global(.blog-content h2) {
+  :global(.blog-content h2),
+  :global(.blog-content h3) {
     margin-top: var(--size-6);
+  }
+
+  :global(.blog-content li) {
+    max-inline-size: 100%;
   }
 
   @media only screen and (max-width: 1024px) {
