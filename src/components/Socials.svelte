@@ -9,7 +9,7 @@
     gap: 1rem;
     margin: 0;
     list-style: none;
-    padding: var(--size-4) var(--size-6);
+    padding: 0;
   }
 
   li {
@@ -40,11 +40,11 @@
 </style>
 
 <ul>
-    {#each data as { path, label, icon }}
-        <li>
-            <a href="{path}">
-                <span>{label}</span>
-            </a>
-        </li>
-    {/each}
+  {#each data as { path, label, icon }}
+    <li>
+      <a href="{path}">
+        <span>{label}</span>
+      </a>
+    </li>
+  {/each}
 </ul>
