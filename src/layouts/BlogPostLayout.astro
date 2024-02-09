@@ -59,7 +59,7 @@ const { content } = Astro.props;
   }
 
   :global(.blog-content li) {
-    max-inline-size: 100%;
+    max-inline-size: var(--size-content-3);
   }
 
   @media only screen and (max-width: 1024px) {
