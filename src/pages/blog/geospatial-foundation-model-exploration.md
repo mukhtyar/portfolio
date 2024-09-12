@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: Exploring Geospatial Foundation Models
 client: Self
-publishDate: 2024-02-08 00:00:00
+publishDate: 2024-08-24 00:00:00
 description: Exploring where geospatial foundation models fit within the larger context of AI
 tags:
   - ai
