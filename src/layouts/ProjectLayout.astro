@@ -160,6 +160,35 @@ const { frontmatter } = Astro.props;
     margin-bottom: var(--size-1);
   }
 
+  /* Impact & Outcomes section styling */
+  :global(.project-content h2#impact--outcomes) {
+    text-align: center;
+    font-size: var(--font-size-7);
+    margin-bottom: var(--size-8);
+  }
+
+  :global(.outcomes-grid) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--size-6);
+    margin-top: var(--size-6);
+  }
+
+  :global(.outcomes-grid p) {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-3);
+    border-radius: var(--radius-3);
+    padding: var(--size-6);
+    margin: 0;
+  }
+
+  :global(.outcomes-grid strong) {
+    display: block;
+    font-size: var(--font-size-5);
+    margin-bottom: var(--size-3);
+    color: var(--gray-9);
+  }
+
   @media only screen and (max-width: 1024px) {
     h1 {
       margin: var(--size-4) 0;
@@ -167,6 +196,12 @@ const { frontmatter } = Astro.props;
     }
 
     .project-screenshots {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    :global(.outcomes-grid) {
       grid-template-columns: 1fr;
     }
   }
