@@ -1,4 +1,3 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-npx lint-staged
+# Husky v9 - update this hook as needed
+# Example: npm run lint && npm run format

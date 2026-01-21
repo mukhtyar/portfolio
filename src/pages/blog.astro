@@ -2,15 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPostWrapper from "../components/BlogPostWrapper.svelte";
 
-interface MarkdownFrontmatter {
-  publishDate: number;
-}
-
-const posts = Astro.fetchContent<MarkdownFrontmatter>("./blog/**/*.md")
-  .filter(({ publishDate }) => !!publishDate)
+const allPosts = await Astro.glob("./blog/**/*.md");
+const posts = allPosts
+  .filter(({ frontmatter }) => !!frontmatter.publishDate)
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+      new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
   );
 ---
 

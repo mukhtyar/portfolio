@@ -11,19 +11,21 @@ import { routes } from "../data/routes";
 const socials = routes.filter((d) => d.icon);
 
 // Data Fetching: List all Markdown posts for project in the repo.
-const projects = Astro.fetchContent("./project/**/*.md")
-  .filter(({ endDate }) => !!endDate)
+const allProjects = await Astro.glob("./project/**/*.md");
+const projects = allProjects
+  .filter(({ frontmatter }) => !!frontmatter.endDate)
   .sort(
-    (a, b) => new Date(b.endDate).valueOf() - new Date(a.endDate).valueOf()
+    (a, b) => new Date(b.frontmatter.endDate).valueOf() - new Date(a.frontmatter.endDate).valueOf()
   );
 const latestProjects = projects.slice(0, 3);
 
 // Data Fetching: List all Markdown posts for blog in the repo.
-const posts = Astro.fetchContent("./blog/**/*.md")
-  .filter(({ publishDate }) => !!publishDate)
+const allPosts = await Astro.glob("./blog/**/*.md");
+const posts = allPosts
+  .filter(({ frontmatter }) => !!frontmatter.publishDate)
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+      new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
   );
 const latestPosts = posts.slice(-4);
 ---
