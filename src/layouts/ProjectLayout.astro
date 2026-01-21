@@ -3,41 +3,41 @@ import BaseLayout from "./BaseLayout.astro";
 import Button from "../components/Button.svelte";
 import { projectDateOptions } from "../data/constants";
 
-const { content } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout
-  title={content.title}
-  description={content.description}
-  path={content.url}
+  title={frontmatter.title}
+  description={frontmatter.description}
+  path={frontmatter.url}
 >
   <section>
     <div class="container">
       <div class="project-top-content">
-        <h1>{content.description}</h1>
-        <Button href={content.url} target={true}>View Website</Button>
+        <h1>{frontmatter.description}</h1>
+        <Button href={frontmatter.url} target={true}>View Website</Button>
       </div>
 
       <div class="project-about-grid">
         <div class="project-about-wrapper">
           <div class="project-about-title">Services</div>
           <ul>
-            {content.services.map((d) => <li>{d}</li>)}
+            {frontmatter.services.map((d) => <li>{d}</li>)}
           </ul>
         </div>
         <div class="project-about-wrapper">
           <div class="project-about-title">Client</div>
           <ul>
-            {content.clients.map((d) => <li>{d}</li>)}
+            {frontmatter.clients.map((d) => <li>{d}</li>)}
           </ul>
         </div>
         <div class="project-about-wrapper">
           <div class="project-about-title">Date</div>
           <div>
-            {new Date(content.startDate).toLocaleDateString(
+            {new Date(frontmatter.startDate).toLocaleDateString(
               "en-US",
               projectDateOptions
-            )} - {new Date(content.endDate).toLocaleDateString(
+            )} - {new Date(frontmatter.endDate).toLocaleDateString(
               "en-US",
               projectDateOptions
             )}
@@ -52,7 +52,7 @@ const { content } = Astro.props;
       </div>
     </div>
     <div class="project-screenshots">
-      {content.screenshots.map((d) => <img src="/assets/projects/${d.img}" alt=${d.alt} title=${d.title} />)}
+      {frontmatter.screenshots.map((d) => <img src={`/assets/projects/${d.img}`} alt={d.alt} title={d.title} />)}
     </div>
   </section>
 </BaseLayout>
