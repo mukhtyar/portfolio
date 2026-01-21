@@ -1,17 +1,19 @@
-const postcssPresetEnv = require("postcss-preset-env");
-const postcssJitProp = require("postcss-jit-props");
-const OpenProps = require("open-props");
+import postcssPresetEnv from "postcss-preset-env";
+import postcssJitProp from "postcss-jit-props";
+import OpenProps from "open-props";
+import autoprefixer from "autoprefixer";
+import postcssNested from "postcss-nested";
 
 const lib = process.env.npm_lifecycle_event;
 
 const inlineMediaQueries = lib === "lib:media" || lib === "lib:supports";
 // todo: inline MQs for 'lib:all' when it's supported better
 
-module.exports = {
+export default {
   plugins: [
     postcssJitProp(OpenProps),
-    require("autoprefixer"),
-    require("postcss-nested"),
+    autoprefixer,
+    postcssNested,
     postcssPresetEnv({
       stage: 0,
       autoprefixer: false,
