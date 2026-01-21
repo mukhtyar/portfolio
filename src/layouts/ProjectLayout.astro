@@ -116,6 +116,50 @@ const { frontmatter } = Astro.props;
     margin-top: var(--size-6);
   }
 
+  /* My Role section specific styling */
+  :global(.project-content h2#my-role) {
+    font-size: var(--font-size-6);
+    margin-bottom: var(--size-2);
+  }
+
+  :global(.project-content h2#my-role + p) {
+    font-style: italic;
+    color: var(--gray-7);
+    margin-bottom: var(--size-6);
+  }
+
+  /* Style bullets under My Role with purple circles */
+  :global(.project-content h2#my-role ~ ul) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  :global(.project-content h2#my-role ~ ul li) {
+    display: flex;
+    gap: var(--size-4);
+    margin-bottom: var(--size-6);
+    align-items: flex-start;
+  }
+
+  :global(.project-content h2#my-role ~ ul li::before) {
+    content: '';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--brand);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  :global(.project-content h2#my-role ~ ul li strong) {
+    display: block;
+    font-size: var(--font-size-4);
+    margin-bottom: var(--size-1);
+  }
+
   @media only screen and (max-width: 1024px) {
     h1 {
       margin: var(--size-4) 0;
