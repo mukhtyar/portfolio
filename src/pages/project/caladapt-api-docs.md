@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Cal-Adapt
+featured: false
 url: https://berkeley-gif.github.io/caladapt-docs/index.html
 description: "Enabling Programmatic Access to Climate Data for Researchers and Developers"
 img: caladapt.jpeg

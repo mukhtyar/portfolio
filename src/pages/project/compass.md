@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Coastal Plan Alignment Compass
+featured: false
 url: https://resilientca.org/topics/plan-alignment/compass/
 description: "Making Coastal Planning Guidance Usable Across Local Governments"
 img: compass.jpg

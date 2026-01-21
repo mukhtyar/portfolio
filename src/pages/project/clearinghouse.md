@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Adaptation Clearinghouse
+featured: true
 url: https://resilientca.org/
 description: "Enabling Discovery of Climate Adaptation Resources"
 img: clearinghouse.png

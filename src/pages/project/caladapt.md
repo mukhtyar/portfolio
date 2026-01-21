@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Cal-Adapt
+featured: true
 url: https://cal-adapt.org/
 description: "Building Actionable Climate Data Tools for Local Decision-Making"
 img: caladapt.jpeg
