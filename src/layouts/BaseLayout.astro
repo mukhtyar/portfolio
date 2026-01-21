@@ -13,10 +13,10 @@ const { title, description, path } = Astro.props;
     <MainHead {title} {description} />
   </head>
   <body>
-    <!-- <Nav client:load {routes} currentRoute={path} /> -->
+    <Nav client:load {routes} currentRoute={path} />
     <main id="main">
       <slot />
     </main>
-    <!-- <Footer {routes} currentRoute={path} /> -->
+    <Footer {routes} currentRoute={path} />
   </body>
 </html>
