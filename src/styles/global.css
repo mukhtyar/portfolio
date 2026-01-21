@@ -3,7 +3,9 @@
 @import "open-props/media";
 
 :root {
-  --brand: var(--grape-7);
+  --brand: #ae3ec9;
+  --brand-light: #c77ddb;
+  --brand-dark: #952db3;
   --link: var(--indigo-7);
   --link-visited: var(--indigo-7);
   --size-content-4: 70ch;
