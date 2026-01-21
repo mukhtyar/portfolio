@@ -33,11 +33,11 @@ screenshots:
 
 ## Context & Problem
 
-Climate change presents complex, localized risks - from extreme heat and wildfire to sea-level rise — that impact communities, infrastructure, and local planning decisions. Yet, peer-reviewed climate data and projections are often hard to access or interpret for planners, policy teams, and practitioners who need usable insights rather than raw datasets.
+Climate change presents complex, localized risks, from extreme heat and wildfire to sea-level rise. These risks impact communities, infrastructure, and local planning decisions. Yet, peer-reviewed climate data and projections are often hard to access or interpret for planners, policy teams, and practitioners who need usable insights rather than raw datasets.
 
 ## What the Product Is
 
-Cal-Adapt is an open, public web platform that synthesizes peer-reviewed climate projections and research into interactive visualization tools, maps, and downloadable data to help California’s agencies, planners, and stakeholders explore future climate scenarios at local scales. Users can explore temperature trends, precipitation changes, wildfire risk, and other climate variables tied to specific places in California.
+[Cal-Adapt](https://cal-adapt.org/) is an open, public web platform that synthesizes peer-reviewed climate projections and research into interactive visualization tools, maps, and downloadable data to help California’s agencies, planners, and stakeholders explore future climate scenarios at local scales. Users can explore temperature trends, precipitation changes, wildfire risk, and other climate variables tied to specific places in California. 
 
 ## My Role
 
@@ -45,9 +45,9 @@ As a core developer and product contributor on Cal-Adapt (2013–2022), I:
 
 - Led the modernization of the web infrastructure — transitioning from a legacy Django site to a hybrid static + interactive architecture optimized for performance and extensibility.
 
-- Designed and built a suite of interactive climate tools and dashboards that allow users to explore and extract data tailored to their region and planning context, using D3, Mapbox, and API integrations.
+- Designed and built a suite of interactive climate tools and dashboards using downscaled climate data produced for California's [Fourth Climate Change Assessment](https://climateassessment.ca.gov/) that allow users to explore and extract data tailored to their region and planning context, using D3, Mapbox, and API integrations.
 
-- Partnered closely with stakeholders, science advisors, and clients (including the California Energy Commission and Strategic Growth Council) to define user needs, prioritize functionality, and refine workflows.
+- Partnered closely with stakeholders, science advisors, and clients (including the [California Energy Commission](https://www.energy.ca.gov/) and [Strategic Growth Council](https://sgc.ca.gov/)) to define user needs, prioritize functionality, and refine workflows.
 
 - Prototyped interfaces through tools like Jupyter and ObservableHQ and translated concepts into production UI components using Figma and Svelte.
 

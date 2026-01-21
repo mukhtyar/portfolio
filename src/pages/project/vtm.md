@@ -31,7 +31,7 @@ The core challenge was not generating new data, but rescuing, structuring, and p
 
 ## What the Product Is
 
-Vegetation Type Mapping (VTM) is a public web platform that brings together historical vegetation maps, plot locations, and photographs from the Wieslander surveys into a unified, map-based exploratory experience. The product enables researchers and practitioners to browse datasets spatially, connect visual records to geographic locations, and use historical ecology as a comparative baseline for contemporary analysis.
+[Vegetation Type Mapping (VTM)](http://vtm.berkeley.edu/#/home) is a public web platform that brings together historical vegetation maps, plot locations, and photographs from the Wieslander surveys into a unified, map-based exploratory experience. The product enables researchers and practitioners to browse datasets spatially, connect visual records to geographic locations, and use historical ecology as a comparative baseline for contemporary analysis.
 
 Rather than serving as a static archive, the site was designed as an exploratory research tool that bridges early 20th-century field surveys with modern, digital ecological workflows.
 
@@ -39,13 +39,11 @@ Rather than serving as a static archive, the site was designed as an exploratory
 
 Working with the UC Berkeley Department of Environmental Science, Policy, and Management and the Geospatial Innovation Facility, I:
 
-Led the design and development of the public-facing product, translating complex, research-oriented datasets into an accessible, map-driven interface.
+- Led the design and development of the public-facing product, translating complex, research-oriented datasets into an accessible, map-driven interface.
 
-Framed the product around spatial exploration, allowing users to discover relationships between vegetation types, plot data, and historical photographs through geography rather than dense tables or documentation.
+- Framed the product around spatial exploration, allowing users to discover relationships between vegetation types, plot data, and historical photographs through geography rather than dense tables or documentation.
 
-Balanced fidelity to the original scientific data with usability, ensuring historical accuracy while making the interface approachable for users outside the original research community.
-
-Implemented an interactive mapping experience capable of handling large numbers of spatial points, surfacing early performance and data-visualization tradeoffs inherent in browser-based mapping tools at the time.
+- Implemented an interactive mapping experience capable of handling large numbers of spatial points, surfacing early performance and data-visualization tradeoffs inherent in browser-based mapping tools at the time.
 
 ## Impact & Outcomes
 <div class="outcomes-grid">

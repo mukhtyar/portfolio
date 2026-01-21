@@ -34,13 +34,13 @@ A central challenge was not a lack of content, but making authoritative adaptati
 
 ## What the Product Is
 
-The Adaptation Clearinghouse is a public, web-based platform that curates and organizes climate adaptation resources to support planning and implementation across California. It enables users to discover tools, guidance, and case studies through multiple exploration paths — including search, topic-based browsing, and planning phases — rather than forcing a single linear workflow.
+The [Adaptation Clearinghouse](https://resilientca.org/) is a public, web-based platform that curates and organizes climate adaptation resources to support planning and implementation across California. It enables users to discover tools, guidance, and case studies through multiple exploration paths — including search, topic-based browsing, and planning phases — rather than forcing a single linear workflow.
 
 A core component of the product is the interactive, web-based Adaptation Planning Guide, which translates a lengthy, policy-heavy print document into a navigable, task-oriented experience designed for use during real planning workflows.
 
 ## My Role
 
-As the designer and developer working closely with the Governor’s Office of Planning and Research, I:
+As the designer and developer working closely with the [Governor’s Office of Planning and Research](https://www.lci.ca.gov/), I:
 
 - Led product and UX strategy to define how diverse users could explore and apply adaptation resources, based on early discovery discussions and review of comparable clearinghouse models.
 
@@ -49,8 +49,6 @@ As the designer and developer working closely with the Governor’s Office of Pl
 - Iterated on the interface through multiple rounds of stakeholder feedback, balancing usability improvements with alignment to California state web standards and institutional design expectations.
 
 - Re-imagined the 200+ page Adaptation Planning Guide as an interactive web product, restructuring dense content into scannable sections using tabs, accordions, and summaries to support real-world planning use.
-
-- Made deliberate tradeoffs between completeness and clarity, prioritizing findability and comprehension over exhaustive reproduction of long-form report content.
 
 ## Impact & Outcomes
 
