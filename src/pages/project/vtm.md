@@ -2,7 +2,7 @@
 layout: ../../layouts/ProjectLayout.astro
 title: Vegetation Type Mapping
 url: http://vtm.berkeley.edu/#/home
-description: "Rescuing historical ecological data"
+description: "Preserving and Enabling Access to Historical Ecological Data"
 img: vtm.jpeg
 services:
   - Web Development
@@ -23,14 +23,43 @@ screenshots:
     title: "VTM vegetation"
 ---
 
-## Background
+## Context & Problem
 
-The Wieslander Vegetation Type Mapping website showcases vegetation maps, photographs and plot locations from a series of surveys from the 1920s and 1930s carried out by Albert Everett Wieslander and others. These data represent a snapshot of California's vegetation in the early 20th century, and are a valuable resource for comparative and conservation ecology.
+Understanding long-term ecological change requires reliable historical baselines, yet much of California’s early ecological survey data existed in fragile, analog, or inaccessible formats. Vegetation surveys conducted in the 1920s and 1930s — including maps, photographs, and plot records — represented a uniquely valuable snapshot of pre-modern California ecosystems, but were difficult for researchers to discover, interpret, or reuse.
 
-## My Work
+The core challenge was not generating new data, but rescuing, structuring, and presenting legacy ecological information in a way that made it usable for modern scientific and conservation work.
 
-I designed and built this website using [AngularJS 1.2](https://angularjs.org/) and [Bootstrap](https://getbootstrap.com/). It was my first experience using a JavaScript framework, and I fell in love with the two-way data binding 🤩 till I wanted to plot hundreds of plot and photo locations on a map! With the breaking changes in [Angular 2](https://angularjs.org/), I stayed away from all the cool JavaScript frameworks till I came across [Svelte](https://svelte.dev/) ❤️.
+## What the Product Is
 
-## Credits
+Vegetation Type Mapping (VTM) is a public web platform that brings together historical vegetation maps, plot locations, and photographs from the Wieslander surveys into a unified, map-based exploratory experience. The product enables researchers and practitioners to browse datasets spatially, connect visual records to geographic locations, and use historical ecology as a comparative baseline for contemporary analysis.
 
-Co-developed with the team at the [Geospatial Innovation Facility, UC Berkeley](http://gif.berkeley.edu/), using the [Berkeley Ecoinformatics Engine](https://holos.berkeley.edu/).
+Rather than serving as a static archive, the site was designed as an exploratory research tool that bridges early 20th-century field surveys with modern, digital ecological workflows.
+
+## My Role
+
+Working with the UC Berkeley Department of Environmental Science, Policy, and Management and the Geospatial Innovation Facility, I:
+
+Led the design and development of the public-facing product, translating complex, research-oriented datasets into an accessible, map-driven interface.
+
+Framed the product around spatial exploration, allowing users to discover relationships between vegetation types, plot data, and historical photographs through geography rather than dense tables or documentation.
+
+Balanced fidelity to the original scientific data with usability, ensuring historical accuracy while making the interface approachable for users outside the original research community.
+
+Implemented an interactive mapping experience capable of handling large numbers of spatial points, surfacing early performance and data-visualization tradeoffs inherent in browser-based mapping tools at the time.
+
+## Impact & Outcomes
+<div class="outcomes-grid">
+
+**Data Preservation**
+Helped transform fragile, historical ecological records into a durable, digital public resource.
+
+**Research Enablement**
+Enabled ecologists, conservation scientists, and land managers to use early-20th-century vegetation data as a baseline for studying environmental change.
+
+**Accessible Archives**
+Shifted historical survey materials from a static archive into an exploratory, spatial product usable by a broader audience.
+
+**Product Insight**
+Deepened understanding of how interface design and data structure choices shape whether scientific data can be meaningfully reused beyond its original context.
+
+</div>

@@ -2,7 +2,7 @@
 layout: ../../layouts/ProjectLayout.astro
 title: Adaptation Clearinghouse
 url: https://resilientca.org/
-description: "Enabling discovery of climate adaptation resources"
+description: "Enabling Discovery of Climate Adaptation Resources"
 img: clearinghouse.png
 services:
   - Web Development
@@ -26,18 +26,46 @@ screenshots:
     title: "Adaptation Planning Guide Phase 1"
 ---
 
-## Background
+## Context & Problem
 
-The State Adaptation Clearinghouse is a centralized source of information and resources to assist California decision makers at the state, regional, and local levels for planning and implementing climate adaptation projects.
+Climate adaptation efforts in California rely on a wide range of tools, guidance documents, funding programs, and planning frameworks produced across agencies and organizations. For state, regional, and local decision-makers, these resources were difficult to discover, compare, and apply in practice. Information was fragmented, buried in long reports, or scattered across disconnected websites — creating friction for practitioners who needed actionable guidance under real-world constraints like limited time, staff capacity, and regulatory complexity.
 
-## My Work
+A central challenge was not a lack of content, but making authoritative adaptation knowledge usable for planning and implementation decisions
 
-From our initial discussions and brainstorming sessions, the main overall direction that emerged was to create a user experience that enabled users to explore the Clearinghouse resources in multiple ways. I looked at other clearinghouse websites for best practices and developed designs & web templates for the [Search Resources](https://resilientca.org/search/) and [Find Resources by Topic](https://resilientca.org/topics/) pages.
+## What the Product Is
 
-The current design is a result of improvements based on several rounds of user feedback and a desire from the client to bring the look and feel closer to other state websites.
+The Adaptation Clearinghouse is a public, web-based platform that curates and organizes climate adaptation resources to support planning and implementation across California. It enables users to discover tools, guidance, and case studies through multiple exploration paths — including search, topic-based browsing, and planning phases — rather than forcing a single linear workflow.
 
-I designed and developed an interactive web version of the [Adaptation Planning Guide](https://resilientca.org/apg/). The print version of the guide is over 200 pages with multiple chapters, appendices and figures. It's much harder to read such long content on the web. I created mock-ups in [Figma](https://www.figma.com), creating tabs corresponding to the logical divisions present in the report to chunk up the content, and summarized long paragraphs within each section into lists and accordions.
+A core component of the product is the interactive, web-based Adaptation Planning Guide, which translates a lengthy, policy-heavy print document into a navigable, task-oriented experience designed for use during real planning workflows.
 
-## Credits
+## My Role
 
-Co-developed with the team at the [Geospatial Innovation Facility, UC Berkeley](http://gif.berkeley.edu/). Built with the [State of California Web Template](https://beta.template.webstandards.ca.gov/).
+As the designer and developer working closely with the Governor’s Office of Planning and Research, I:
+
+- Led product and UX strategy to define how diverse users could explore and apply adaptation resources, based on early discovery discussions and review of comparable clearinghouse models.
+
+- Designed and developed multiple discovery pathways — including keyword search and topic-based navigation — to accommodate different user mental models and entry points.
+
+- Iterated on the interface through multiple rounds of stakeholder feedback, balancing usability improvements with alignment to California state web standards and institutional design expectations.
+
+- Re-imagined the 200+ page Adaptation Planning Guide as an interactive web product, restructuring dense content into scannable sections using tabs, accordions, and summaries to support real-world planning use.
+
+- Made deliberate tradeoffs between completeness and clarity, prioritizing findability and comprehension over exhaustive reproduction of long-form report content.
+
+## Impact & Outcomes
+
+<div class="outcomes-grid">
+
+**Improved Discovery**
+Enabled planners and practitioners to quickly find relevant adaptation tools and guidance without prior knowledge of specific agencies or reports.
+
+**Usable Planning Guidance**
+Transformed a static, print-oriented planning guide into a practical, web-based decision aid that could be used during active adaptation planning processes.
+
+**Public-Sector Alignment**
+Delivered a modernized experience that met accessibility and state design standards while significantly improving usability.
+
+**Product Insight**
+Reinforced the importance of treating policy content as a product — requiring user research, information architecture, and iteration — rather than as information to simply publish.
+
+</div>

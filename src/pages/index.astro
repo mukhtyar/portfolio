@@ -34,12 +34,15 @@ const latestPosts = posts.slice(-4);
   <section class="intro">
     <div class="container">
       <h1>
-        Geospatial and web development professional with a strong interest in using AI/ML 
-        to work on climate data projects & help build innovative solutions 
-        to address climate challenges.
+        Designing climate risk products at the intersection of AI, data, and user experience.
       </h1>
-      <p>Experience working across science, policy and tech teams</p>
-      <Socials data={socials} />
+      <p class="lead">I work on data-intensive SaaS products that help infrastructure and insurance stakeholders make better climate-aware decisions</p>
+      <p>
+       My background spans frontend development, geospatial analytics, 
+       and climate data visualization, and I now focus on product strategy, UX, 
+       and applied AI—partnering with modeling teams and customers to turn 
+       complex data into usable tools.
+      </p>
     </div>
   </section>
   <!--
@@ -124,9 +127,8 @@ const latestPosts = posts.slice(-4);
     -webkit-text-fill-color: transparent;
   }
 
-  .intro p {
+  .intro .lead {
     padding: var(--size-6) 0 var(--size-2);
-    text-transform: uppercase;
     font-size: var(--font-size-4);
     color: var(--violet-8);
   }
