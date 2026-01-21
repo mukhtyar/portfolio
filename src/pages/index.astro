@@ -11,19 +11,21 @@ import { routes } from "../data/routes";
 const socials = routes.filter((d) => d.icon);
 
 // Data Fetching: List all Markdown posts for project in the repo.
-const projects = Astro.fetchContent("./project/**/*.md")
-  .filter(({ endDate }) => !!endDate)
+const allProjects = await Astro.glob("./project/**/*.md");
+const projects = allProjects
+  .filter(({ frontmatter }) => frontmatter.featured === true)
   .sort(
-    (a, b) => new Date(b.endDate).valueOf() - new Date(a.endDate).valueOf()
+    (a, b) => new Date(b.frontmatter.endDate).valueOf() - new Date(a.frontmatter.endDate).valueOf()
   );
-const latestProjects = projects.slice(0, 3);
+const latestProjects = projects;
 
 // Data Fetching: List all Markdown posts for blog in the repo.
-const posts = Astro.fetchContent("./blog/**/*.md")
-  .filter(({ publishDate }) => !!publishDate)
+const allPosts = await Astro.glob("./blog/**/*.md");
+const posts = allPosts
+  .filter(({ frontmatter }) => !!frontmatter.publishDate)
   .sort(
     (a, b) =>
-      new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+      new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
   );
 const latestPosts = posts.slice(-4);
 ---
@@ -32,14 +34,18 @@ const latestPosts = posts.slice(-4);
   <section class="intro">
     <div class="container">
       <h1>
-        Geospatial and web development professional with a strong interest in using AI/ML 
-        to work on climate data projects & help build innovative solutions 
-        to address climate challenges.
+        Designing climate risk products at the intersection of AI, data, and user experience.
       </h1>
-      <p>Experience working across science, policy and tech teams</p>
-      <Socials data={socials} />
+      <p class="lead">I work on data-intensive SaaS products that help infrastructure and insurance stakeholders make better climate-aware decisions</p>
+      <p>
+       My background spans frontend development, geospatial analytics, 
+       and climate data visualization, and I now focus on product strategy, UX, 
+       and applied AI—partnering with modeling teams and customers to turn 
+       complex data into usable tools.
+      </p>
     </div>
   </section>
+  <!--
   <section class="recent-posts">
     <div class="container">
       <div class="split-content">
@@ -53,6 +59,7 @@ const latestPosts = posts.slice(-4);
       <Button href="/blog">View All Posts</Button>
     </div>
   </section>
+  -->
   <section class="projects">
     <div class="container">
       <h2>Selected Projects</h2>
@@ -114,29 +121,14 @@ const latestPosts = posts.slice(-4);
   .intro h1 {
     max-inline-size: var(--size-header-3);
     padding: 0;
-    background: linear-gradient(
-      320deg,
-      hsl(288deg 54% 40%) 0%,
-      hsl(279deg 52% 43%) 30%,
-      hsl(270deg 49% 45%) 40%,
-      hsl(260deg 47% 48%) 46%,
-      hsl(249deg 47% 51%) 51%,
-      hsl(236deg 52% 52%) 56%,
-      hsl(232deg 55% 50%) 60%,
-      hsl(236deg 52% 51%) 64%,
-      hsl(241deg 49% 51%) 69%,
-      hsl(246deg 48% 50%) 75%,
-      hsl(250deg 49% 49%) 83%,
-      hsl(255deg 51% 47%) 100%
-    );
-    background-clip: border-box;
+    background: linear-gradient(320deg, hsl(288deg 54% 40%) 0%, hsl(279deg 52% 43%) 30%, hsl(270deg 49% 45%) 40%, hsl(260deg 47% 48%) 46%, hsl(249deg 47% 51%) 51%, hsl(236deg 52% 52%) 56%, hsl(232deg 55% 50%) 60%, hsl(236deg 52% 51%) 64%, hsl(241deg 49% 51%) 69%, hsl(246deg 48% 50%) 75%, hsl(250deg 49% 49%) 83%, hsl(255deg 51% 47%) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .intro p {
+  .intro .lead {
     padding: var(--size-6) 0 var(--size-2);
-    text-transform: uppercase;
     font-size: var(--font-size-4);
     color: var(--violet-8);
   }

@@ -11,10 +11,10 @@ export const routes = [
     path: "/projects",
     label: "Projects",
   },
-  {
-    path: "/blog",
-    label: "Blog",
-  },
+  // {
+  //   path: "/blog",
+  //   label: "Blog",
+  // },
   {
     path: "https://www.linkedin.com/in/shruti-mukhtyar/",
     label: "LinkedIn",

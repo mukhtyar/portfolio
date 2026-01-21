@@ -1,8 +1,9 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: Cal-Adapt
+featured: true
 url: https://cal-adapt.org/
-description: "Building climate tools for local decision makers"
+description: "Building Actionable Climate Data Tools for Local Decision-Making"
 img: caladapt.jpeg
 services:
   - Web Development
@@ -31,20 +32,43 @@ screenshots:
     title: "Caladapt get started"
 ---
 
-## Background
+## Context & Problem
 
-Cal-Adapt provides peer-reviewed climate data and climate tools for California. These are used by state and local agencies in climate risk assessments and adaptation planning. The project is a collaboration between California state agencies, university and private sector researchers.
+Climate change presents complex, localized risks, from extreme heat and wildfire to sea-level rise. These risks impact communities, infrastructure, and local planning decisions. Yet, peer-reviewed climate data and projections are often hard to access or interpret for planners, policy teams, and practitioners who need usable insights rather than raw datasets.
 
-## My Work
+## What the Product Is
 
-I was hired to update Cal-Adapt climate tools using the LOCA downscaled CMIP5 data produced for California's [Fourth Climate Change Assessment](https://climateassessment.ca.gov/). I converted the legacy Django website to a hybrid architecture consisting of static pages and interactive climate tools to take advantage of modern front-end JavaScript tooling and data visualization libraries.
+[Cal-Adapt](https://cal-adapt.org/) is an open, public web platform that synthesizes peer-reviewed climate projections and research into interactive visualization tools, maps, and downloadable data to help California’s agencies, planners, and stakeholders explore future climate scenarios at local scales. Users can explore temperature trends, precipitation changes, wildfire risk, and other climate variables tied to specific places in California. 
 
-In collaboration with Cal-Adapt's clients, stakeholders and science advisor, I designed and built several climate tools that integrated climate data from the Cal-Adapt API and other sources. Several tools are designed as exploratory dashboards using [D3](https://d3js.org/) and [Mapbox](https://www.mapbox.com/) that enable users to explore and download data for their area of interest. I used [Jupyter](https://berkeley-gif.github.io/caladapt-docs/cookbook.html) and [ObservableHQ](https://observablehq.com/collection/@mukhtyar/cal-adapt) notebooks to prototype visualizations and [Figma](https://www.figma.com) mocks to prototype design elements.
+## My Role
 
-For the last 2 years, I led the effort to update the technology stack used for building the website and to develop content to orient new climate data users. We used [IBM's Carbon Design System](https://www.carbondesignsystem.com/) with the [Svelte](https://svelte.dev/) framework to update and redesign the Cal-Adapt website. I was a key player in developing content to create an “onboarding” ramp for new or less technical users who are not familiar with climate science (Get Started). I analyzed Cal-Adapt's email support archive to make a list of frequently asked questions (FAQs) and technical terms (Glossary) and helped in writing comprehensive answers and definitions.
+As a core developer and product contributor on Cal-Adapt (2013–2022), I:
 
-My favorite part of this amazing 8.5 year journey has been connecting with and helping local planners, researchers and climate practitioners across California use Cal-Adapt tools and data through email support and workshops.
+- Led the modernization of the web infrastructure — transitioning from a legacy Django site to a hybrid static + interactive architecture optimized for performance and extensibility.
 
-## Credits
+- Designed and built a suite of interactive climate tools and dashboards using downscaled climate data produced for California's [Fourth Climate Change Assessment](https://climateassessment.ca.gov/) that allow users to explore and extract data tailored to their region and planning context, using D3, Mapbox, and API integrations.
 
-Co-developed with the teams at the [Geospatial Innovation Facility, UC Berkeley](http://gif.berkeley.edu/) and [Eagle Rock Analytics](http://www.eaglerockanalytics.com/).
+- Partnered closely with stakeholders, science advisors, and clients (including the [California Energy Commission](https://www.energy.ca.gov/) and [Strategic Growth Council](https://sgc.ca.gov/)) to define user needs, prioritize functionality, and refine workflows.
+
+- Prototyped interfaces through tools like Jupyter and ObservableHQ and translated concepts into production UI components using Figma and Svelte.
+
+- Led efforts to lower barriers for non-technical users by developing “Get Started” guidance, FAQs, and glossary content, based on real user inquiries.
+
+
+## Impact & Outcomes
+
+<div class="outcomes-grid">
+
+**Democratized Access**
+Enabled state and local planners, researchers, and climate practitioners to access, visualize, and analyze climate data without needing specialist GIS or coding skills.
+
+**Broader Adoption**
+Improved onboarding and accessibility for novice users, leading to broader adoption of climate insights in local resilience planning.
+
+**Resilience Planning**
+Supported climate risk assessment, adaptation planning, and decision-making processes for a wide range of stakeholders throughout California — helping bridge the gap between climate research and applied planning.
+
+**Standard Resource**
+Contributed to a platform recognized by state agencies and practitioners as a go-to resource for climate projection data and exploratory analytics.
+
+</div>

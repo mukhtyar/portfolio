@@ -41,9 +41,9 @@
 
 <a href="{project.url}" class="project-item">
   <div class="project-item-image">
-    <img loading="lazy" src="/assets/{project.img}" alt="{project.title}" />
+    <img loading="lazy" src="/assets/{project.frontmatter.img}" alt="{project.frontmatter.title}" />
   </div>
   <div class="project-item-details">
-    <h3>{project.description}</h3>
+    <h3>{project.frontmatter.description}</h3>
   </div>
 </a>

@@ -67,7 +67,8 @@
 
   <div>
     🚀 Built with <a href="https://astro.build/" target="_blank">Astro</a>,
-    <a href="https://svelte.dev/" target="_blank">Svelte</a>
-    & <a href="https://open-props.style" target="_blank">Open Props</a>
+    <a href="https://svelte.dev/" target="_blank">Svelte</a>, 
+    <a href="https://open-props.style" target="_blank">Open Props</a> &
+    <a href="https://code.claude.com/docs" target="_blank">Claude</a>
   </div>
 </footer>

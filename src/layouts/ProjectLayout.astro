@@ -1,58 +1,42 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import Button from "../components/Button.svelte";
 import { projectDateOptions } from "../data/constants";
 
-const { content } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout
-  title={content.title}
-  description={content.description}
-  path={content.url}
+  title={frontmatter.title}
+  description={frontmatter.description}
+  path={frontmatter.url}
 >
   <section>
     <div class="container">
       <div class="project-top-content">
-        <h1>{content.description}</h1>
-        <Button href={content.url} target={true}>View Website</Button>
-      </div>
-
-      <div class="project-about-grid">
-        <div class="project-about-wrapper">
-          <div class="project-about-title">Services</div>
-          <ul>
-            {content.services.map((d) => <li>{d}</li>)}
-          </ul>
-        </div>
-        <div class="project-about-wrapper">
-          <div class="project-about-title">Client</div>
-          <ul>
-            {content.clients.map((d) => <li>{d}</li>)}
-          </ul>
-        </div>
-        <div class="project-about-wrapper">
-          <div class="project-about-title">Date</div>
-          <div>
-            {new Date(content.startDate).toLocaleDateString(
-              "en-US",
-              projectDateOptions
-            )} - {new Date(content.endDate).toLocaleDateString(
-              "en-US",
-              projectDateOptions
-            )}
-          </div>
-        </div>
+        <h1>{frontmatter.description}</h1>
+        <a href={frontmatter.url} target="_blank" rel="noopener noreferrer" class="project-tagline">
+          {frontmatter.title}
+        </a>
       </div>
 
       <div class="project-divider"></div>
 
+      <div class="project-about-grid">
+        <div class="project-about-wrapper">
+          <div class="project-about-title">Client</div>
+          <ul>
+            {frontmatter.clients.map((d) => <li>{d}</li>)}
+          </ul>
+        </div>
+      </div>
+
       <div class="project-content">
         <slot />
+        <h2>Product Showcase</h2>
+        <div class="project-screenshots">
+          {frontmatter.screenshots.map((d) => <img src={`/assets/projects/${d.img}`} alt={d.alt} title={d.title} />)}
+        </div>
       </div>
-    </div>
-    <div class="project-screenshots">
-      {content.screenshots.map((d) => <img src="/assets/projects/${d.img}" alt=${d.alt} title=${d.title} />)}
     </div>
   </section>
 </BaseLayout>
@@ -60,10 +44,26 @@ const { content } = Astro.props;
 <style>
   .project-top-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: var(--size-2);
     margin-bottom: var(--size-6);
-    flex-wrap: wrap;
-    align-items: first baseline;
+  }
+
+  .project-top-content h1 {
+    max-inline-size: var(--size-header-3);
+  }
+
+  .project-tagline {
+    font-size: var(--font-size-5);
+    color: var(--indigo-8);
+    text-decoration: none;
+    font-weight: var(--font-weight-5);
+    transition: opacity 0.2s ease;
+  }
+
+  .project-tagline:hover {
+    opacity: 0.7;
+    text-decoration: underline;
   }
 
   .project-about-grid {
@@ -76,44 +76,120 @@ const { content } = Astro.props;
 
   .project-about-title {
     margin-bottom: var(--size-1);
-    color: var(--gray-9);
-    font-size: var(--font-size-3);
+    color: var(--gray-6);
+    text-transform: uppercase;
     font-weight: var(--font-weight-5);
+  }
+
+  .project-about-wrapper ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  .project-about-wrapper ul li {
+    padding-inline-start: 0;
+    color: var(--gray-6);
   }
 
   .project-divider {
     width: 100%;
     height: 1px;
     background-color: var(--gray-5);
-    margin: var(--size-6) 0;
+    margin: var(--size-8) 0 var(--size-4) 0;
   }
 
   .project-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: var(--size-4);
   }
 
   .project-screenshots {
+    margin-top: var(--size-2);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: var(--size-4);
-    padding: var(--size-6);
   }
 
   .project-screenshots img {
-    border: 15px solid var(--violet-0);
+    border: 15px solid #f3e5f9;
     border-radius: var(--radius-2);
     height: auto;
     object-fit: cover;
   }
 
-  :global(.project-content p) {
-    margin-top: var(--size-4);
+  :global(.project-content h2) {
+    margin: var(--size-8) 0 var(--size-4);
+    font-family: "Spirax", serif;
   }
 
-  :global(.project-content h2) {
+  /* My Role section specific styling */
+  :global(.project-content h2#my-role + p) {
+    font-style: italic;
+    color: var(--gray-7);
+    margin-bottom: var(--size-6);
+  }
+
+  /* Style bullets under My Role with purple circles */
+  :global(.project-content h2#my-role ~ ul) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  :global(.project-content h2#my-role ~ ul li) {
+    display: flex;
+    gap: var(--size-4);
+    margin-bottom: var(--size-4);
+    align-items: flex-start;
+  }
+
+  :global(.project-content h2#my-role ~ ul li::before) {
+    content: '';
+    display: inline-flex;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--brand);
+    background-image: url('/assets/icons/flower.svg');
+    background-size: 60%; /* Slightly smaller often looks better centered */
+    background-repeat: no-repeat;
+    background-position: center; /* Shorthand for center center */
+    border-radius: 50%;
+    flex-shrink: 0;
+    
+    /* Center the bullet vertically with the first line of text */
+    align-self: flex-start; 
+    transform: translateY(15%);
+  }
+
+  :global(.project-content h2#my-role ~ ul li strong) {
+    display: block;
+    font-size: var(--font-size-4);
+    margin-bottom: var(--size-1);
+  }
+
+  /* Impact & Outcomes section styling */
+  :global(.outcomes-grid) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--size-6);
     margin-top: var(--size-6);
+  }
+
+  :global(.outcomes-grid p) {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-3);
+    border-radius: var(--radius-3);
+    padding: var(--size-6);
+    margin: 0;
+  }
+
+  :global(.outcomes-grid strong) {
+    display: block;
+    font-size: var(--font-size-4);
+    margin-bottom: var(--size-2);
+    font-weight: 500;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -123,6 +199,12 @@ const { content } = Astro.props;
     }
 
     .project-screenshots {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    :global(.outcomes-grid) {
       grid-template-columns: 1fr;
     }
   }

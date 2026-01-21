@@ -29,12 +29,12 @@
 
 <div class="post-wrapper">
   <a href="{post.url}" class="post-link">
-    <h3>{post.title}</h3>
-    <p>{post.description}</p>
+    <h3>{post.frontmatter.title}</h3>
+    <p>{post.frontmatter.description}</p>
   </a>
   <div class="post-about-wrapper">
     <span
-      >{new Date(post.publishDate).toLocaleDateString(
+      >{new Date(post.frontmatter.publishDate).toLocaleDateString(
         "en-US",
         dateOptions
       )}</span

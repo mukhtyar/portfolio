@@ -2,13 +2,16 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectWrapper from "../components/ProjectWrapper.svelte";
 
-const projects = Astro.fetchContent<MarkdownFrontmatter>("./project/**/*.md")
-  .filter(({ endDate }) => !!endDate)
-  .sort(
-    (a, b) => new Date(b.endDate).valueOf() - new Date(a.endDate).valueOf()
-  );
-
-//const projects = Astro.fetchContent("./project/**/*.md")
+const allProjects = await Astro.glob("./project/**/*.md");
+const projects = allProjects
+  .filter(({ frontmatter }) => !!frontmatter.endDate)
+  .sort((a, b) => {
+    // Featured projects come first
+    if (a.frontmatter.featured && !b.frontmatter.featured) return -1;
+    if (!a.frontmatter.featured && b.frontmatter.featured) return 1;
+    // Within each group, sort by most recent endDate
+    return new Date(b.frontmatter.endDate).valueOf() - new Date(a.frontmatter.endDate).valueOf();
+  });
 ---
 
 <BaseLayout title="Shruti Mukhtyar" description="Portfolio" path="/projects">

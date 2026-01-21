@@ -17,6 +17,7 @@
 
 <style>
   .btn {
+    color: var(--indigo-7);
     border: var(--border-size-2) solid currentColor;
     padding: var(--size-2) var(--size-4);
     text-transform: uppercase;
