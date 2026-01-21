@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import Button from "../components/Button.svelte";
 import { projectDateOptions } from "../data/constants";
 
 const { frontmatter } = Astro.props;
@@ -15,7 +14,9 @@ const { frontmatter } = Astro.props;
     <div class="container">
       <div class="project-top-content">
         <h1>{frontmatter.description}</h1>
-        <Button href={frontmatter.url} target={true}>View Website</Button>
+        <a href={frontmatter.url} target="_blank" rel="noopener noreferrer" class="project-tagline">
+          {frontmatter.title}
+        </a>
       </div>
 
       <div class="project-divider"></div>
@@ -43,10 +44,26 @@ const { frontmatter } = Astro.props;
 <style>
   .project-top-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: var(--size-2);
     margin-bottom: var(--size-6);
-    flex-wrap: wrap;
-    align-items: first baseline;
+  }
+
+  .project-top-content h1 {
+    max-inline-size: var(--size-header-3);
+  }
+
+  .project-tagline {
+    font-size: var(--font-size-5);
+    color: var(--indigo-8);
+    text-decoration: none;
+    font-weight: var(--font-weight-5);
+    transition: opacity 0.2s ease;
+  }
+
+  .project-tagline:hover {
+    opacity: 0.7;
+    text-decoration: underline;
   }
 
   .project-about-grid {
@@ -71,6 +88,7 @@ const { frontmatter } = Astro.props;
 
   .project-about-wrapper ul li {
     padding-inline-start: 0;
+    color: var(--gray-6);
   }
 
   .project-divider {
@@ -139,11 +157,10 @@ const { frontmatter } = Astro.props;
     background-position: center; /* Shorthand for center center */
     border-radius: 50%;
     flex-shrink: 0;
-    margin-right: 12px; /* Add space between bullet and text */
     
     /* Center the bullet vertically with the first line of text */
     align-self: flex-start; 
-    transform: translateY(-10%); /* Fine-tune based on your font-size */
+    transform: translateY(15%);
   }
 
   :global(.project-content h2#my-role ~ ul li strong) {
