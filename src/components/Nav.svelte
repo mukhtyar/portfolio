@@ -82,7 +82,6 @@
       padding-inline-start: 0;
       gap: 0.5rem;
       flex-wrap: wrap;
-      margin-top: 1rem;
     }
   }
 </style>
