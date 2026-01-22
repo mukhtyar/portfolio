@@ -2,6 +2,12 @@
 @import "open-props/postcss/normalize";
 @import "open-props/media";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --brand: #ae3ec9;
   --brand-light: #c77ddb;
@@ -31,6 +37,18 @@ p {
   max-inline-size: var(--size-content-4);
 }
 
+@media only screen and (max-width: 480px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    max-inline-size: 100%;
+  }
+}
+
 section {
   margin: var(--size-8) 0;
 }
@@ -45,6 +63,14 @@ section {
   padding: var(--size-4);
   margin: 0 auto;
   max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: var(--size-3);
+  }
 }
 
 .sr-only:not(:focus):not(:active) {

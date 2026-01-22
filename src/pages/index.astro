@@ -128,7 +128,7 @@ const latestPosts = posts.slice(-4);
   }
 
   .intro .lead {
-    padding: var(--size-6) 0 var(--size-2);
+    padding: var(--size-4) 0 var(--size-4);
     font-size: var(--font-size-4);
     color: var(--violet-8);
   }
@@ -152,20 +152,22 @@ const latestPosts = posts.slice(-4);
   }
 
   @media only screen and (max-width: 768px) {
-    .intro h1 {
-      padding: var(--size-1);
-      margin: var(--size-2) 0;
-      font-size: var(--font-size-4);
-      color: var(--gray-7);
-    }
-
-    .intro p {
-      padding: var(--size-2) var(--size-1);
-      font-size: var(--font-size-2);
+    section {
+      margin: var(--size-4) var(--size-2);
     }
 
     .split-content {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .intro h1 {
+      max-inline-size: 100%;
+    }
+
+    ul > li {
+      max-inline-size: 100%;
     }
   }
 </style>
