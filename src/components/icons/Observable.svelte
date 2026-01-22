@@ -6,11 +6,11 @@
     DEFAULT_TITLE,
   } from "./constants";
 
-  let width = DEFAULT_SIZE;
-  let height = DEFAULT_SIZE;
-  let fill = DEFAULT_FILL_COLOR;
-  let ariaHidden = DEFAULT_ARIA_HIDDEN;
-  let title = DEFAULT_TITLE;
+  export let width = DEFAULT_SIZE;
+  export let height = DEFAULT_SIZE;
+  export let fill = DEFAULT_FILL_COLOR;
+  export let ariaHidden = DEFAULT_ARIA_HIDDEN;
+  export let title = DEFAULT_TITLE;
 
   const titleId = "icon-observablehq";
   const ariaLabelledBy = !ariaHidden && title;

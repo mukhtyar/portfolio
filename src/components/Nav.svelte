@@ -1,6 +1,24 @@
 <script>
+  import {
+    IconGithub,
+    IconObservable,
+    IconLinkedIn,
+    IconKaggle,
+  } from "./icons";
+
   export let routes;
   export let currentRoute = "/";
+
+  const iconMap = {
+    github: IconGithub,
+    observable: IconObservable,
+    linkedin: IconLinkedIn,
+    kaggle: IconKaggle,
+  };
+
+  function getIconComponent(iconName) {
+    return iconName ? iconMap[iconName] : null;
+  }
 </script>
 
 <style>
@@ -75,14 +93,15 @@
   </div>
   <ul role="menu">
     {#each routes as { path, label, icon }}
+      {@const IconComponent = getIconComponent(icon)}
       <li>
         <a
           class:active="{currentRoute === path}"
           aria-current="{currentRoute === path}"
           href="{path}"
         >
-          {#if icon}
-            <svelte:component this="{icon}" height="{20}" width="{20}" />
+          {#if IconComponent}
+            <svelte:component this="{IconComponent}" height="{20}" width="{20}" />
             <span class="sr-only">{label}</span>
           {:else}
             {label}
