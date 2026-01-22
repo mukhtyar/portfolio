@@ -85,9 +85,11 @@ section {
 
  a, a:visited {                                                                            
    color: var(--link);                                                          
-   text-decoration: none;                                                  
+   text-decoration: none;
+   transition: opacity 0.2s ease;                                                
  }                                                                              
                                                                                 
- a:hover {                                                                         
-   text-decoration: underline dotted;                                            
+ a:hover {
+  opacity: 0.8;                                                                    
+  text-decoration: underline dotted;                                            
  } 
