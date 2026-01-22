@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: Vegetation Type Mapping
+title: Vegetation Type Mapping (VTM)
 featured: true
 url: http://vtm.berkeley.edu/#/home
 description: "Preserving and Enabling Access to Historical Ecological Data"
