@@ -83,6 +83,10 @@
       gap: 0.5rem;
       flex-wrap: wrap;
     }
+
+    .nav-link-text {
+      display: none;
+    }
   }
 </style>
 
@@ -96,6 +100,7 @@
       <li>
         <a
           class:active="{currentRoute === path}"
+          class:nav-link-text="{!IconComponent}"
           aria-current="{currentRoute === path}"
           href="{path}"
         >
