@@ -14,16 +14,13 @@
   }
 
   a {
-    color: var(--grape-9);
-  }
-
-  a.active {
-    text-decoration: underline;
+    color: var(--grape-8);
+    text-decoration: underline dotted;
   }
 
   a:hover,
   a:visited {
-    color: var(--grape-9);
+    color: var(--grape-8);
   }
 
   ul {
