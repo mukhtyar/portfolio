@@ -3,6 +3,27 @@ import BaseLayout from "./BaseLayout.astro";
 import { projectDateOptions } from "../data/constants";
 
 const { frontmatter } = Astro.props;
+
+// Fetch and order all projects for navigation
+const allProjects = await Astro.glob("../pages/project/**/*.md");
+const sortedProjects = allProjects
+  .filter(({ frontmatter }) => !!frontmatter.endDate)
+  .sort((a, b) => {
+    // Featured projects come first
+    if (a.frontmatter.featured && !b.frontmatter.featured) return -1;
+    if (!a.frontmatter.featured && b.frontmatter.featured) return 1;
+    // Within each group, sort by most recent endDate
+    return new Date(b.frontmatter.endDate).valueOf() - new Date(a.frontmatter.endDate).valueOf();
+  });
+
+// Find current project index
+const currentIndex = sortedProjects.findIndex(
+  (project) => project.frontmatter.title === frontmatter.title
+);
+
+// Determine previous and next projects
+const prevProject = currentIndex > 0 ? sortedProjects[currentIndex - 1] : null;
+const nextProject = currentIndex < sortedProjects.length - 1 ? sortedProjects[currentIndex + 1] : null;
 ---
 
 <BaseLayout
@@ -28,6 +49,12 @@ const { frontmatter } = Astro.props;
             {frontmatter.clients.map((d) => <li>{d}</li>)}
           </ul>
         </div>
+        <div class="project-about-wrapper">
+          <div class="project-about-title">Project Teams</div>
+          <ul>
+            {frontmatter.collaborators.map((d) => <li>{d}</li>)}
+          </ul>
+        </div>
       </div>
 
       <div class="project-content">
@@ -37,6 +64,30 @@ const { frontmatter } = Astro.props;
           {frontmatter.screenshots.map((d) => <img src={`/assets/projects/${d.img}`} alt={d.alt} title={d.title} />)}
         </div>
       </div>
+
+      {(prevProject || nextProject) && (
+        <>
+          <div class="project-divider"></div>
+          <nav class="project-navigation" aria-label="Project navigation">
+            <div class="project-nav-grid">
+              {prevProject && (
+                <a href={prevProject.url} class="project-nav-link project-nav-prev">
+                  <span class="project-nav-direction">← Previous Project</span>
+                  <span class="project-nav-title">{prevProject.frontmatter.title}</span>
+                  <span class="project-nav-description">{prevProject.frontmatter.description}</span>
+                </a>
+              )}
+              {nextProject && (
+                <a href={nextProject.url} class="project-nav-link project-nav-next">
+                  <span class="project-nav-direction">Next Project →</span>
+                  <span class="project-nav-title">{nextProject.frontmatter.title}</span>
+                  <span class="project-nav-description">{nextProject.frontmatter.description}</span>
+                </a>
+              )}
+            </div>
+          </nav>
+        </>
+      )}
     </div>
   </section>
 </BaseLayout>
@@ -79,6 +130,7 @@ const { frontmatter } = Astro.props;
     color: var(--gray-6);
     text-transform: uppercase;
     font-weight: var(--font-weight-5);
+    font-size: 14px;
   }
 
   .project-about-wrapper ul {
@@ -103,6 +155,10 @@ const { frontmatter } = Astro.props;
     flex-direction: column;
     align-items: center;
     margin-top: var(--size-4);
+  }
+
+  .project-content > p {
+    margin-top: var(--size-2);
   }
 
   .project-screenshots {
@@ -142,6 +198,10 @@ const { frontmatter } = Astro.props;
     gap: var(--size-4);
     margin-bottom: var(--size-4);
     align-items: flex-start;
+  }
+
+  :global(.project-content h2#my-role ~ ul li p) {
+    margin-top: 0;
   }
 
   :global(.project-content h2#my-role ~ ul li::before) {
@@ -206,6 +266,86 @@ const { frontmatter } = Astro.props;
   @media only screen and (max-width: 768px) {
     :global(.outcomes-grid) {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* Project Navigation Styles */
+  .project-navigation {
+    margin-top: var(--size-6);
+  }
+
+  .project-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--size-6);
+  }
+
+  .project-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2);
+    padding: var(--size-5);
+    border: 1px solid var(--gray-4);
+    border-radius: var(--radius-3);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: var(--gray-0);
+  }
+
+  .project-nav-link:hover {
+    border-color: var(--indigo-8);
+    background: var(--gray-1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-nav-prev {
+    grid-column: 1;
+  }
+
+  .project-nav-next {
+    grid-column: 2;
+    text-align: right;
+  }
+
+  /* When only one link exists, center it or make it full width */
+  .project-nav-grid:has(.project-nav-link:only-child) {
+    grid-template-columns: 1fr;
+  }
+
+  .project-nav-grid .project-nav-link:only-child {
+    grid-column: 1;
+  }
+
+  .project-nav-direction {
+    font-size: var(--font-size-1);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-6);
+    color: var(--indigo-8);
+    letter-spacing: 0.05em;
+  }
+
+  .project-nav-title {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-5);
+    color: var(--gray-9);
+  }
+
+  .project-nav-description {
+    font-size: var(--font-size-2);
+    color: var(--gray-7);
+    line-height: 1.5;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .project-nav-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-nav-prev,
+    .project-nav-next {
+      grid-column: 1;
+      text-align: left;
     }
   }
 </style>
