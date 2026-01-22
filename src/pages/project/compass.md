@@ -12,6 +12,8 @@ startDate: 2019-02-01 00:00:00
 endDate: 2019-05-01 00:00:00
 clients:
   - "Governors Office of Planning and Research"
+collaborators:
+  - Geospatial Innovation Facility, UC Berkeley
 screenshots:
   - img: "compass-home.jpeg"
     alt: "Screenshot of the Coastal Plan Alignment Compass guide home page"

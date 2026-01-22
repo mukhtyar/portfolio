@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: Cal-Adapt
+title: Cal-Adapt API
 featured: false
 url: https://berkeley-gif.github.io/caladapt-docs/index.html
 description: "Enabling Programmatic Access to Climate Data for Researchers and Developers"
@@ -13,6 +13,8 @@ endDate: 2018-03-01 00:00:00
 clients:
   - California Energy Commission
   - Strategic Growth Council
+collaborators:
+  - Geospatial Innovation Facility, UC Berkeley
 screenshots:
   - img: "caladapt-docs-start.jpeg"
     alt: "Screenshot of the Get Started section for Caladapt API documentation"

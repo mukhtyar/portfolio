@@ -11,7 +11,9 @@ services:
 startDate: 2016-10-01 00:00:00
 endDate: 2022-01-01 00:00:00
 clients:
-  - "Governors Office of Planning and Research"
+  - "California Governors Office of Planning and Research"
+collaborators:
+  - Geospatial Innovation Facility, UC Berkeley
 screenshots:
   - img: "clearinghouse-home.jpeg"
     alt: "Screenshot of the Adaptation Clearinghouse home page"
@@ -45,11 +47,11 @@ As the designer and developer working closely with the [Governor’s Office of P
 
 - Led product and UX strategy to define how diverse users could explore and apply adaptation resources, based on early discovery discussions and review of comparable clearinghouse models.
 
-- Designed and developed multiple discovery pathways — including keyword search and topic-based navigation — to accommodate different user mental models and entry points.
+- Designed and developed multiple discovery pathways, including keyword search and topic-based navigation, to accommodate different user mental models and entry points.
 
 - Iterated on the interface through multiple rounds of stakeholder feedback, balancing usability improvements with alignment to California state web standards and institutional design expectations.
 
-- Re-imagined the 200+ page Adaptation Planning Guide as an interactive web product, restructuring dense content into scannable sections using tabs, accordions, and summaries to support real-world planning use.
+- Re-imagined the 200+ page [Adaptation Planning Guide](https://resilientca.org/apg/) as an interactive web product, restructuring dense content into scannable sections using tabs, accordions, and summaries to support real-world planning use.
 
 ## Impact & Outcomes
 
@@ -65,6 +67,6 @@ Transformed a static, print-oriented planning guide into a practical, web-based 
 Delivered a modernized experience that met accessibility and state design standards while significantly improving usability.
 
 **Product Insight**
-Reinforced the importance of treating policy content as a product — requiring user research, information architecture, and iteration — rather than as information to simply publish.
+Reinforced the importance of treating policy content as a product - requiring user research, information architecture, and iteration - rather than as information to simply publish.
 
 </div>

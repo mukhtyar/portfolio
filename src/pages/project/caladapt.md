@@ -17,6 +17,9 @@ endDate: 2022-03-01 00:00:00
 clients:
   - California Energy Commission
   - Strategic Growth Council
+collaborators:
+  - Geospatial Innovation Facility, UC Berkeley
+  - Eagle Rock Analytics
 screenshots:
   - img: "caladapt-home.jpeg"
     alt: "Screenshot of the Caladapt home page"
@@ -44,7 +47,7 @@ Climate change presents complex, localized risks, from extreme heat and wildfire
 
 As a core developer and product contributor on Cal-Adapt (2013–2022), I:
 
-- Led the modernization of the web infrastructure — transitioning from a legacy Django site to a hybrid static + interactive architecture optimized for performance and extensibility.
+- Led the modernization of the web infrastructure, transitioning from a legacy Django site to a hybrid static + interactive architecture optimized for performance and extensibility.
 
 - Designed and built a suite of interactive climate tools and dashboards using downscaled climate data produced for California's [Fourth Climate Change Assessment](https://climateassessment.ca.gov/) that allow users to explore and extract data tailored to their region and planning context, using D3, Mapbox, and API integrations.
 

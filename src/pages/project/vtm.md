@@ -12,6 +12,9 @@ startDate: 2014-02-01 00:00:00
 endDate: 2016-13-01 00:00:00
 clients:
   - "UC Berkeley Department of Environmental Science, Policy, and Management "
+collaborators:
+  - Geospatial Innovation Facility, UC Berkeley
+  - Holos, Berkeley Ecoinformatics Engine
 screenshots:
   - img: "vtm-home.jpeg"
     alt: "Screenshot of the VTM home page"
